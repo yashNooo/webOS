@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YashOS</title>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div id="topBar">
+        <div class="logo">🖥️ YashOS</div>
+
+        <div id="timeElement">
+            Loading...
+        </div>
+
+    </div>
+
+
+<div id="desktop">
+        <div class="desktopIcon" id="notesIcon"  style="width: 50px; ">
+            <img src="icon.jpeg" alt="Notes">
+            <p style="color: white; margin-top: 8px; font-size: 15px;">Notes</p>
+        </div>
+
+        <!-- <div class="desktopIcon" id="wallpaperIcon">
+        
+            <img src="wall2.jpg" alt="Wallpaper">
+        
+            <p>Wallpaper</p>
+        
+        </div> -->
+
+    </div>
+
+
+    <div class="window" id="welcomeWindow">
+
+        <div class="windowHeader" id="welcomeWindowheader">
+            <span>Welcome</span>
+            <button class="closeBtn" id="welcomeClose">
+                ✕
+            </button>
+
+        </div>
+
+        <div class="windowBody">
+
+            <h1>Welcome to YashOS</h1>
+
+            <p>
+                YashOS is a desktop inspired operating system made using
+                HTML, CSS and JavaScript.
+            </p>
+
+            <p>
+                Click the Notes icon to start creating notes.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="window" id="notesWindow">
+        <div class="windowHeader" id="notesWindowheader">
+            <span>📝 Notes</span>
+            <button class="closeBtn" id="notesClose">
+                ✕
+            </button>
+        </div>
+
+
+
+
+        <div class="notesContainer">
+
+            <div class="sidebar">
+
+                <button id="newNoteBtn">
+                    + New Note
+                </button>
+
+                <div id="noteList"></div>
+            </div>
+
+
+            <div class="editor">
+
+                <input type="text" id="noteTitle" placeholder="Note Title">
+
+                <textarea id="noteContent" placeholder="Write your note here..."></textarea>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

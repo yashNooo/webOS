@@ -1,0 +1,303 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("yess.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+
+#topBar {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 55px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 18px;
+    backdrop-filter: blur(18px);
+
+    background: rgba(255, 255, 255, .15);
+
+    color: white;
+
+    z-index: 100000000;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
+
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#timeElement {
+    font-size: 15px;
+}
+
+
+
+#desktop {
+    padding-top: 100px;
+    padding-left: 30px;
+}
+
+
+
+.desktopIcon:hover {
+
+    background: rgba(255, 255, 255, .2);
+
+}
+
+.desktopIcon.selected {
+
+    background: rgba(255, 255, 255, .35);
+
+}
+
+.desktopIcon img {
+
+    width: 65px;
+    height: 65px;
+
+    border-radius: 18px;
+
+
+
+}
+
+
+.window {
+
+    position: absolute;
+    width: 850px;
+    height: 550px;
+
+    left: 260px;
+    top: 120px;
+
+    display: none;
+
+    flex-direction: column;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    backdrop-filter: blur(25px);
+
+    background: rgba(255, 255, 255, .15);
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .45);
+
+}
+
+
+
+.windowHeader {
+
+    height: 55px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 20px;
+
+    background: rgba(255, 255, 255, .15);
+
+    color: white;
+
+    cursor: move;
+
+    font-weight: bold;
+
+}
+
+
+.closeBtn {
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #ff4d4d;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: .2s;
+
+}
+
+.closeBtn:hover {
+
+    background: #ff1f1f;
+    transform: scale(1.08);
+
+}
+
+
+.windowBody {
+
+    flex: 1;
+    padding: 30px;
+    background: white;
+    overflow: auto;
+}
+
+
+.windowBody p {
+
+    margin-bottom: 15px;
+    line-height: 1.7;
+
+}
+
+.notesContainer {
+
+    flex: 1;
+    display: flex;
+    background: white;
+
+}
+
+
+.sidebar {
+
+    width: 240px;
+
+    border-right: 1px solid #ddd;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 15px;
+
+    background: #f8f8f8;
+
+}
+
+#newNoteBtn {
+
+    height: 45px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #4a7dff;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    margin-bottom: 15px;
+
+    transition: .25s;
+
+}
+
+
+#noteList {
+    flex: 1;
+    overflow-y: auto;
+
+}
+
+
+
+
+.noteItem {
+
+    padding: 12px;
+
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+
+    background: white;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+    border: 1px solid #ddd;
+
+}
+
+.noteItem:hover {
+
+    background: #ececec;
+
+}
+
+.noteItem.active {
+
+    background: #4a7dff;
+
+    color: white;
+
+}
+
+
+
+.editor {
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#noteTitle {
+    width: 100%;
+    padding: 12px;
+    font-size: 25px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+#noteContent {
+
+    flex: 1;
+    resize: none;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    line-height: 1.7;
+    font-family: Arial;
+
+}
+
